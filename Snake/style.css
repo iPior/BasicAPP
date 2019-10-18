@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap%27');
+*{
+	font-family: 'Press Start 2P', cursive;
+}
 
 body{
-	background-color: grey;
+	/*background-color: grey;*/
+	background-image: url("/Snake/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	width: 100%;
 	height: 100%;
 	margin: 0px;
     border: 0;
 	overflow: hidden;
+	position: absolute;
 	
-	color: #fff;
-	background: linear-gradient(-45deg, #000, #ffffff);
-	background-size: 400% 400%;
-	position: relative;
-	animation: change 5s ease-in-out infinite;
 	
-	/*margin-top: 10%;
+	/*	
+	margin-top: 10%;
 	margin-bottom: 10%;
 	margin-right: 5%;
 	margin-left: 5%;*/
@@ -25,7 +28,6 @@ header{
 	padding-top: 0.12em;
 	color: black;
 	text-align: center;
-	font-family: 'Press Start 2P', cursive;
 	letter-spacing: -10px;
 	font-size: 124px;
 	/*border: 3px solid #fff;*/
@@ -37,36 +39,34 @@ header{
 }
 
 .score{
-	color: black;
 	text-align: center;
-	font-family: 'Press Start 2P', cursive;
-	letter-spacing: -2px;
 	font-size: 25px;
-	font-variant: uppercase;
-
 	-webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: white;
 	-webkit-text-fill-color: #420766;
 }
 
-footer{
-	font-family: 'Press Start 2P', cursive;
+#game-box{
+	top: 50%;
+	left: 50%;
 	text-align: center;
+}
+
+
+#game-box-border{
+	text-align: center;
+	width: 800px;
+	height: 450px;
+	border: 1px solid white;
+}
+
+footer{
+	text-align: center;
+	
+	font-size: 20px;
 	letter-spacing: -1px;
 	margin-bottom: 0.1em;
 	-webkit-text-stroke-width: 0.3px;
     -webkit-text-stroke-color: white;
 	-webkit-text-fill-color: #420766;
-}
-
-@keyframes change{
-	0%{
-		background-position: 0 50%;
-	}
-	50%{
-		background-position: 100% 50%;
-	}
-	100%{
-		background-position: 0 50%;
-	}
 }

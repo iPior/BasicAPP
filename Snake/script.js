@@ -57,9 +57,11 @@ function Snake(){
 var s;
 var size = 10;
 var food;
+var canvas;
 
 function setup(){
-	createCanvas(720,640);
+	canvas = createCanvas(800,450);
+	canvas.parent('game-box');
 	s = new Snake();
 	frameRate(10);
 	updateFood();
