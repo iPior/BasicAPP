@@ -4,36 +4,31 @@
 	<head>
 	    <meta charset="UTF-8">
 
-	    <title> Snake </title>
+		<title> Snake </title>
+		<link rel="shortcut icon" type="image/x-icon" href="/Snake/snake.png"/>
 
 	    <!-- Links to CSS, JS, p5-->
 	    <link rel="stylesheet" href="style.css">
-	    <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 		<script src="script.js"> </script>
 	    <script src="p5/p5/p5.min.js"> </script>
-
-	    <!-- BACKUP LINK TO P5 - online
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
-		-->
 
 	</head>
 
 	<!--BODY-->
 	<body>
 		<header> Snake </header>
-
+		
 		<div id="game-box-border">
 			<!-- Border for canvas-->
 			<div id="game-box"> <!-- Canvas --> </div>
 		</div>
 
-		
-		<span class="score">GAME SCORE:</span>  
-		<span id="game-score" class="score">0</span>
-
+		<div class="score">
+			<span>GAME SCORE:</span>  
+			<span id="game-score">0</span>
+		</div>
+		<br>
 		<footer>developed by pior & vivek</footer>
 
 	</body>

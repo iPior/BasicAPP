@@ -1,3 +1,4 @@
+const score_div = document.getElementById("game-score")
 //Snake Class
 function Snake(){
 	this.x = 360;
@@ -85,6 +86,7 @@ function draw(){
 	s.draw();
 
 	fill(255, 0, 100);
+	//fill(66, 7, 102); same purple as text
 	rect(food.x, food.y, size, size);
 }
 
