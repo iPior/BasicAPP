@@ -1,4 +1,4 @@
-const score_div = document.getElementById("game-score")
+const score_div = document.getElementById("game-score");
 //Main Game
 var s;
 var size = 10;
@@ -27,9 +27,11 @@ function draw(){
 	if(s.collision(food)){
 		updateFood();
 		score++;
+		score_div.innerHTML = score;
 	}
 	if(s.end()){
 		score = 0;
+		score_div.innerHTML = score;
 	}
 	s.update(score);
 	s.draw();
