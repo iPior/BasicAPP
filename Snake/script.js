@@ -1,7 +1,7 @@
 const score_div = document.getElementById("game-score");
 //Main Game
 var s;
-var size = 10;
+var size = 20;
 var food;
 var canvas;
 var score = 0;
