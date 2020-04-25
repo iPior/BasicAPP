@@ -1,10 +1,10 @@
 const score_div = document.getElementById("game-score");
 //Main Game
-var s;
-var size = 20;
-var food;
-var canvas;
-var score = 0;
+let s;
+let size = 20;
+let food;
+let canvas;
+let score = 0;
 
 function setup(){
 	canvas = createCanvas(800,450);
@@ -15,8 +15,8 @@ function setup(){
 }
 
 function updateFood(){
-	var w = floor(width/size);
-	var h = floor(height/size);
+	let w = floor(width/size);
+	let h = floor(height/size);
 	food = createVector(floor(random(w)), floor(random(h)));
 	food.mult(size);
 }
@@ -44,13 +44,16 @@ function draw(){
 function keyPressed(){
 	if(keyCode === UP_ARROW){
 		s.dir(0, -1);
-  } else if (keyCode === DOWN_ARROW) {
+	}
+	else if (keyCode === DOWN_ARROW) {
     s.dir(0, 1);
-  } else if (keyCode === RIGHT_ARROW) {
+	}
+	else if (keyCode === RIGHT_ARROW) {
     s.dir(1, 0);
-  } else if (keyCode === LEFT_ARROW) {
+  	}
+	else if (keyCode === LEFT_ARROW) {
     s.dir(-1, 0);
-  }
+  	}
 }
 //Snake Class
 function Snake(){
@@ -62,7 +65,7 @@ function Snake(){
 	this.trail = [];
 
 	this.collision = function(pos){
-		var d = dist(this.x, this.y, pos.x, pos.y)
+		let d = dist(this.x, this.y, pos.x, pos.y)
 		if (d <1){
 			//this.score++;
 			return true;
@@ -75,8 +78,8 @@ function Snake(){
 		this.yspeed = y;
 	}
 	this.end = function(){
-		for (var i = 0; i< this.trail.length; i++){
-			var position = this.trail[i];
+		for (let i = 0; i< this.trail.length; i++){
+			let position = this.trail[i];
 			if (this.collision(position)){
 				//game over
 				//this.score = 0;
@@ -102,7 +105,7 @@ function Snake(){
 
 	this.draw = function(){
 		fill(255);
-		for (var i = 0; i< this.trail.length; i++){
+		for (let i = 0; i< this.trail.length; i++){
 			rect(this.trail[i].x, this.trail[i].y, size, size);
 		}
 		rect(this.x, this.y, size, size);
