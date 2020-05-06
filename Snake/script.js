@@ -43,15 +43,27 @@ function draw(){
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
+		if (s.yspeed === 1){
+			s.end();
+		}
 		s.dir(0, -1);
 	}
 	else if (keyCode === DOWN_ARROW) {
+		if(s.yspeed === -1){
+			s.end();
+		}
     s.dir(0, 1);
 	}
 	else if (keyCode === RIGHT_ARROW) {
+		if (s.xspeed === -1){
+			s.end();
+		}
     s.dir(1, 0);
   	}
 	else if (keyCode === LEFT_ARROW) {
+		if (s.xspeed === 1){
+			s.end();
+		}
     s.dir(-1, 0);
   	}
 }
@@ -61,13 +73,11 @@ function Snake(){
 	this.y = 320;
 	this.xspeed = 0;
 	this.yspeed = 0;
-	//this.score = 0;
 	this.trail = [];
 
 	this.collision = function(pos){
 		let d = dist(this.x, this.y, pos.x, pos.y)
 		if (d <1){
-			//this.score++;
 			return true;
 		}
 		return false;
@@ -83,6 +93,8 @@ function Snake(){
 			if (this.collision(position)){
 				//game over
 				//this.score = 0;
+				alert("Game Over \nYour Score: " + score);
+				document.location.reload();
 				this.trail = [];
 				return true;
 			}
